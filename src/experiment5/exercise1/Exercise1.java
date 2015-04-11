@@ -16,7 +16,7 @@ public class Exercise1 extends JFrame
 	private Ball ball = new Ball(20); 
 			
 	public Exercise1() {
-		setTitle("ÒÆ¶¯µÄĞ¡Çò");
+		setTitle("ç§»åŠ¨çš„å°çƒ");
 		getContentPane().setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

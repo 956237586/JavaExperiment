@@ -8,7 +8,7 @@ public class Tax {
 	public static final int MARRIED_JOINTLY = 1;
 	public static final int MARRIED_SEPERATELY = 2;
 	public static final int HEAD_OF_HOUSEHOLD = 3;
-	private static double[][] stageTax;//ÀûÓÃÆä¾²Ì¬µÄÌØĞÔÖ»³õÊ¼»¯Ò»´Î
+	private static double[][] stageTax;//åˆ©ç”¨å…¶é™æ€çš„ç‰¹æ€§åªåˆå§‹åŒ–ä¸€æ¬¡
 	
 	private int filingStatus;
 	private int[][] brackets;
@@ -72,7 +72,7 @@ public class Tax {
 	}
 
 	private void initStageTax() {
-		// ¼ÆËãÖØ¸´µ÷ÓÃµÄÊı×é
+		// è®¡ç®—é‡å¤è°ƒç”¨çš„æ•°ç»„
 		stageTax = new double[4][brackets[0].length];
 		int i, j;
 		for (i = 0; i < 4; i++) {

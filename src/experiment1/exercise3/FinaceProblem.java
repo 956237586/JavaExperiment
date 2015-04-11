@@ -41,7 +41,7 @@ public class FinaceProblem {
 
 	public static void main(String[] args) {
 		/*/
-		// ¼ÆËãÖØ¸´µ÷ÓÃµÄÊı×é
+		// è®¡ç®—é‡å¤è°ƒç”¨çš„æ•°ç»„
 		int i, j;
 		for (i = 0; i < 4; i++) {
 			for (j = 0; j < 5; j++) {
@@ -74,17 +74,17 @@ public class FinaceProblem {
 		/*/
 		Scanner in = new Scanner(System.in);
 		System.out.println(
-				"0-µ¥ÉíÄÉË°ÈË, "
-				+ "1-ÒÑ»é¹²Í¬ÄÉË°ÈË»òÖ¤ÊµµÄ÷¤¹Ñ, "
-				+ "2-ÒÑ»éµ¥¶ÀÄÉË°ÈË, "
-				+ "3-¼ÒÍ¥»§Ö÷ÄÉË°ÈË");
+				"0-å•èº«çº³ç¨äºº, "
+				+ "1-å·²å©šå…±åŒçº³ç¨äººæˆ–è¯å®çš„é³å¯¡, "
+				+ "2-å·²å©šå•ç‹¬çº³ç¨äºº, "
+				+ "3-å®¶åº­æˆ·ä¸»çº³ç¨äºº");
 		System.out.print("Enter the filing status:");
 		int filingStatus = in.nextInt();
 
 		System.out.print("Enter the taxable income:");
 		int income = in.nextInt();
 		in.close();
-		// ÊäÈë½áÊø
+		// è¾“å…¥ç»“æŸ
 		double tax = computeTax(filingStatus, income);
 		System.out.println("Tax is " + tax);
 		//*/

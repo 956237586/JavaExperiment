@@ -6,13 +6,13 @@ public class FinanceVer2 {
 	/**
 	 * 
 	 * @param alertString
-	 *            ÌáÊ¾Óï¾ä
-	 * @return ÓÃ»§ÊäÈë
+	 *            æç¤ºè¯­å¥
+	 * @return ç”¨æˆ·è¾“å…¥
 	 */
 	public static String getUeserInput(String alertString) {
 		String userInput = JOptionPane.showInputDialog(null,
 				alertString, 
-				"ÊäÈë",
+				"è¾“å…¥",
 				JOptionPane.QUESTION_MESSAGE);
 		return userInput;
 	}
@@ -20,15 +20,15 @@ public class FinanceVer2 {
 	/**
 	 * 
 	 * @param s
-	 *            Ô­Ê¼×Ö·û´®
-	 * @return ×ª»»µÄĞ¡Êı
+	 *            åŸå§‹å­—ç¬¦ä¸²
+	 * @return è½¬æ¢çš„å°æ•°
 	 */
 	public static double toDouble(String s) {
 		return Double.parseDouble(s);
 	}
 
 	public static void main(String[] args) {
-		//½«ÒªÓÃµ½µÄ×Ö·û´®
+		//å°†è¦ç”¨åˆ°çš„å­—ç¬¦ä¸²
 		String[] s = new String[] { "Enter employee's name: ",
 				"Enter number of hours worked in a week: ",
 				"Enter hourly pay rate: ",
@@ -44,21 +44,21 @@ public class FinanceVer2 {
 				"  Total Deduction: $",
 				"Net Pay: $" };
 		
-		//ÊäÈë²¿·Ö¿ªÊ¼
+		//è¾“å…¥éƒ¨åˆ†å¼€å§‹
 		String name = getUeserInput(s[0]);
 		double hours = toDouble((getUeserInput(s[1])));
 		double hourlyPayRate = toDouble(getUeserInput(s[2]));
 		double federalTaxRate = toDouble(getUeserInput(s[3]));
 		double stateTaxRate = toDouble(getUeserInput(s[4]));
 		
-		//¼ÆËã²¿·Ö¿ªÊ¼
+		//è®¡ç®—éƒ¨åˆ†å¼€å§‹
 		double grossPay = hourlyPayRate * hours;
 		double federalWithholding = grossPay * federalTaxRate;
 		double stateWihtholding = grossPay * stateTaxRate;
 		double totalDeduction = federalWithholding + stateWihtholding;
 		double netPay = grossPay - totalDeduction;
 
-		//Êä³ö²¿·Ö¿ªÊ¼
+		//è¾“å‡ºéƒ¨åˆ†å¼€å§‹
 		JOptionPane.showMessageDialog(
 				null,
 				s[5] + name + "\n" + 

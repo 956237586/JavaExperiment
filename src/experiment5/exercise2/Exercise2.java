@@ -24,12 +24,12 @@ public class Exercise2 extends JFrame
 	
 	public Exercise2() {
 		setResizable(false);
-		setTitle("¼òµ¥µÄ¼ÆËãÆ÷");
+		setTitle("ç®€å•çš„è®¡ç®—å™¨");
 		getContentPane().setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		texts = new String[][]{
-				{"¼Ó","¼õ","³Ë","³ı",},
-				{"µÚÒ»¸öÊı:","µÚÒ»¸öÊı:","½á¹û:",},};
+				{"åŠ ","å‡","ä¹˜","é™¤",},
+				{"ç¬¬ä¸€ä¸ªæ•°:","ç¬¬ä¸€ä¸ªæ•°:","ç»“æœ:",},};
 		
 		for (int i = 0; i < buttons.length; i++) {
 			buttons[i] = new JButton(texts[0][i]);
@@ -75,7 +75,7 @@ public class Exercise2 extends JFrame
 		Object clickObject = arg0.getSource();
 		if (!(textFields[0].getText().equals("") 
 				|| textFields[1].getText().equals(""))) {
-			// ¼ì²é±à¼­¿òÊÇ·ñÎª¿Õ£¬·ÀÖ¹³ÌĞòÅ×³ö´íÎó
+			// æ£€æŸ¥ç¼–è¾‘æ¡†æ˜¯å¦ä¸ºç©ºï¼Œé˜²æ­¢ç¨‹åºæŠ›å‡ºé”™è¯¯
 			double num1 = Double.parseDouble(textFields[0].getText());
 			double num2 = Double.parseDouble(textFields[1].getText());
 			if (clickObject.equals(buttons[0])) {
@@ -93,7 +93,7 @@ public class Exercise2 extends JFrame
 	@Override
 	public void mousePressed(MouseEvent e) {
 		Object clickObject = e.getSource();
-		// ÉèÖÃÏ¸½Ú£¬×Ô¶¯Çå¿ÕÄÚÈİ
+		// è®¾ç½®ç»†èŠ‚ï¼Œè‡ªåŠ¨æ¸…ç©ºå†…å®¹
 		if (clickObject.equals(textFields[0])) {
 			textFields[0].setText("");
 			textFields[2].setText("");
@@ -105,7 +105,7 @@ public class Exercise2 extends JFrame
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		// ÉèÖÃÏ¸½Ú£¬×Ô¶¯ÇĞ»»½¹µã
+		// è®¾ç½®ç»†èŠ‚ï¼Œè‡ªåŠ¨åˆ‡æ¢ç„¦ç‚¹
 		Object pressedObject = e.getSource();
 		if (pressedObject.equals(textFields[0]) && e.getKeyCode() == 10) {
 			textFields[1].requestFocus();

@@ -20,7 +20,7 @@ public class Exercise3 {
 		
 		System.out.println("fun1 status:\n" + fun1);
 		System.out.println("\nfun2 status:\n" + fun2);
-		//此处由于重写了toString()方法
-		//所以会自动调用Fun类自己的toString()
+		//姝ゅ鐢变簬閲嶅啓浜唗oString()鏂规硶
+		//鎵�浠ヤ細鑷姩璋冪敤Fun绫昏嚜宸辩殑toString()
 	}
 }

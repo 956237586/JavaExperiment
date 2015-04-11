@@ -35,7 +35,7 @@ public class Exercise4 {
 			System.out.println();
 		}
 		System.out.println("------------------------------------------------");
-		//表头打印完成
+		//琛ㄥご鎵撳嵃瀹屾垚
 		Tax tax = null;
 		for (int i = 50000; i <= 60000; i += 1000) {
 			System.out.printf("%-10d", i);

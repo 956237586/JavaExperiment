@@ -11,17 +11,17 @@ public class Exercise2 {
 		Scanner in = new Scanner(System.in);
 		int number = in.nextInt();
 		in.close();
-		// ÓÃ»§ÊäÈë½áÊø
+		// ç”¨æˆ·è¾“å…¥ç»“æŸ
 		int i = 2;
 		while (!isPrime(number)) {
 			if (isPrime(i) && number % i == 0) {
 				stack.push(i);
 				number /= i;
-			} else { // iÊÇËØÊı¡¢number¿ÉÒÔ±»iÕû³ı
-				i++; // ÖÁÉÙÓĞÒ»Ìõ²»Âú×ã
+			} else { // iæ˜¯ç´ æ•°ã€numberå¯ä»¥è¢«iæ•´é™¤
+				i++; // è‡³å°‘æœ‰ä¸€æ¡ä¸æ»¡è¶³
 			}
 		}
-		stack.push(number); // ×îºóÊ£ÏÂµÄÊıÈëÕ»
+		stack.push(number); // æœ€åå‰©ä¸‹çš„æ•°å…¥æ ˆ
 		while (!stack.isEmpty()) {
 			System.out.print(stack.pop() + " ");
 		}

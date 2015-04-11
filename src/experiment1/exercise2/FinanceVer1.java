@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class FinanceVer1 {
 
 	public static void main(String[] args) {
-		//½«ÒªÓÃµ½µÄ×Ö·û´®
+		//å°†è¦ç”¨åˆ°çš„å­—ç¬¦ä¸²
 		String[] s = new String[] { 
 				"Enter employee's name: ",
 				"Enter number of hours worked in a week: ",
@@ -22,7 +22,7 @@ public class FinanceVer1 {
 				"  Total Deduction: $",
 				"Net Pay: $"};
 		
-		//ÊäÈë²¿·Ö¿ªÊ¼
+		//è¾“å…¥éƒ¨åˆ†å¼€å§‹
 		Scanner in = new Scanner(System.in);
 		
 		System.out.print(s[0]);
@@ -41,14 +41,14 @@ public class FinanceVer1 {
 		double stateTaxRate = in.nextDouble();
 		in.close();
 		
-		//¼ÆËã²¿·Ö¿ªÊ¼		
+		//è®¡ç®—éƒ¨åˆ†å¼€å§‹		
 		double grossPay = hourlyPayRate * hours;
 		double federalWithholding = grossPay * federalTaxRate;
 		double stateWihtholding = grossPay * stateTaxRate;
 		double totalDeduction = federalWithholding + stateWihtholding;
 		double netPay = grossPay - totalDeduction;
 		
-		//Êä³ö²¿·Ö¿ªÊ¼
+		//è¾“å‡ºéƒ¨åˆ†å¼€å§‹
 		System.out.println(s[5] + name);
 		System.out.println(s[6] + hours);
 		System.out.println(s[7] + hourlyPayRate);

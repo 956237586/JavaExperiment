@@ -20,14 +20,14 @@ public class Exercise3 extends JFrame
 	private static final int DEFAULT_NUM_OF_TEXTFIELD = 4;
 	private JLabel[] labels = new JLabel[DEFAULT_NUM_OF_LABEL];
 	private JTextField[] textFields = new JTextField[DEFAULT_NUM_OF_TEXTFIELD];
-	private JButton button = new JButton("¼ÆËãÍ¶×ÊÖµ");
+	private JButton button = new JButton("è®¡ç®—æŠ•èµ„å€¼");
 	private String[] texts;
 	public Exercise3() {
 		setResizable(false);
-		setTitle("Í¶×ÊÖµ¼ÆËãÆ÷");
+		setTitle("æŠ•èµ„å€¼è®¡ç®—å™¨");
 		getContentPane().setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		texts = new String[] { "Í¶×Ê×Ü¶î", "Í¶×ÊÄêÏŞ", "ÄêÀûÂÊ", "Î´À´ÊÕÒæÖµ", };
+		texts = new String[] { "æŠ•èµ„æ€»é¢", "æŠ•èµ„å¹´é™", "å¹´åˆ©ç‡", "æœªæ¥æ”¶ç›Šå€¼", };
 		
 
 		for (int i = 0; i < labels.length; i++) {
@@ -69,7 +69,7 @@ public class Exercise3 extends JFrame
 		if(!(textFields[0].getText().equals("") 
 				|| textFields[1].getText().equals("")
 				|| textFields[2].getText().equals(""))){
-			//¼ì²éÊäÈëÖµ£¬·ÀÖ¹³ÌĞòÅ×³ö´íÎó
+			//æ£€æŸ¥è¾“å…¥å€¼ï¼Œé˜²æ­¢ç¨‹åºæŠ›å‡ºé”™è¯¯
 			double num1 = Double.parseDouble(textFields[0].getText());
 			double num2 = Double.parseDouble(textFields[1].getText());
 			double num3 = Double.parseDouble(textFields[2].getText());
@@ -90,7 +90,7 @@ public class Exercise3 extends JFrame
 	@Override
 	public void mousePressed(MouseEvent e) {
 		Object clickObject = e.getSource();
-		// ÉèÖÃÏ¸½Ú£¬×Ô¶¯Çå¿ÕÄÚÈİ
+		// è®¾ç½®ç»†èŠ‚ï¼Œè‡ªåŠ¨æ¸…ç©ºå†…å®¹
 		if (clickObject.equals(textFields[0])) {
 			textFields[0].setText("");
 			textFields[3].setText("");
@@ -106,7 +106,7 @@ public class Exercise3 extends JFrame
 	
 	@Override
 	public void keyPressed(KeyEvent e) {
-		// ÉèÖÃÏ¸½Ú£¬×Ô¶¯ÇĞ»»½¹µã
+		// è®¾ç½®ç»†èŠ‚ï¼Œè‡ªåŠ¨åˆ‡æ¢ç„¦ç‚¹
 		Object pressedObject = e.getSource();
 		if (e.getKeyCode() == 10) {
 			if (pressedObject.equals(textFields[0])) {
