@@ -15,14 +15,14 @@ import experiment3.exercise1.Account;
 public class AtmMachine {
 	private static Account[] accounts;
 	private Scanner in = new Scanner(System.in);
-	private Account currentAccount;
+	private Account currentAccount;// current operate account
 
 	public AtmMachine() {
 	}
 
 	/**
 	 * This is an constructor function that have an property "accounts". It can
-	 * create a AtmMachine instantiate.
+	 * create a AtmMachine instance.
 	 * 
 	 * @param accounts
 	 */

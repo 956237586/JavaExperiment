@@ -11,6 +11,8 @@ import experiment3.exercise1.Account;
 public class Exercise5 {
 
 	public static void main(String[] args) {
+		// Due to the use of generic, so we can add different types of objects
+		// to this list.
 		ArrayList<Object> list = new ArrayList<Object>();
 		list.add(new GregorianCalendar());
 		list.add("This is a String");

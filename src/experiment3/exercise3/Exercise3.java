@@ -7,6 +7,8 @@ public class Exercise3 {
 
 	public static void main(String[] args) {
 		Account.setAnnualInterestRate(0.045);
+		// According to the experiment requirement, create the following
+		// instances.
 		Account account0 = new Account(0, 100);
 		Account account1 = new SavingAccount(1, 200);
 		Account account2 = new CheckingAccount(2, 300, 100);
