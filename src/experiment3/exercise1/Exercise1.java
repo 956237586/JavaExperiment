@@ -1,4 +1,4 @@
-package experiment3.exercise1;
+ï»¿package experiment3.exercise1;
 
 public class Exercise1 {
 
@@ -6,8 +6,8 @@ public class Exercise1 {
         Account account = new Account(1122, 20000);
         Account.setAnnualInterestRate(0.045);
         account.withDraw(2500).deposit(3000);
-        // ÓÉÓÚÕâÁ½¸ö·½·¨¶¼±»ÎÒ¶¨Òå³ÉÁË·µ»Øthis
-        // ËùÒÔÔÚµ÷ÓÃÊ±ºò¿ÉÒÔÁ¬Ğøµ÷ÓÃ
+        // ç”±äºè¿™ä¸¤ä¸ªæ–¹æ³•éƒ½è¢«æˆ‘å®šä¹‰æˆäº†è¿”å›this
+        // æ‰€ä»¥åœ¨è°ƒç”¨æ—¶å€™å¯ä»¥è¿ç»­è°ƒç”¨
         System.out.println(account);
     }
 

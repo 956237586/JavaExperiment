@@ -4,6 +4,14 @@ import java.util.Scanner;
 
 import experiment3.exercise1.Account;
 
+/**
+ * This class is a AtmMachine it has a Scanner "in" read user input a property
+ * "accounts" include what account can operate through this Machine, the more
+ * detail please reference descriptions of each function.
+ * 
+ * @author HYL
+ *
+ */
 public class AtmMachine {
 	private static Account[] accounts;
 	private Scanner in = new Scanner(System.in);
@@ -12,18 +20,41 @@ public class AtmMachine {
 	public AtmMachine() {
 	}
 
+	/**
+	 * This is an constructor function that have an property "accounts". It can
+	 * create a AtmMachine instantiate.
+	 * 
+	 * @param accounts
+	 */
 	public AtmMachine(Account[] accounts) {
 		AtmMachine.setAccounts(accounts);
 	}
 
+	/**
+	 * This function can set accounts which can operate through this AtmMachine.
+	 * 
+	 * @param accounts
+	 *            An Account Array, in this Array, every account can operate
+	 *            through this AtmMachine.
+	 */
 	public static void setAccounts(Account[] accounts) {
 		AtmMachine.accounts = accounts;
 	}
 
+	/**
+	 * When this Machine read error input from user, this function will be call.
+	 * 
+	 */
 	private void showErrorMessage() {
 		System.out.println("Input error! Please try again!");
 	}
 
+	/**
+	 * Show operate result from userChoice.
+	 * 
+	 * @param userChoice
+	 *            user choice.
+	 */
 	private void showResult(int userChoice) {
 		switch (userChoice) {
 		case 1:
@@ -61,6 +92,9 @@ public class AtmMachine {
 		}
 	}
 
+	/**
+	 * Show Main Menu to user.
+	 */
 	private void showMainMenu() {
 		String[] s = new String[] { "Main menu", "1: check balance",
 				"2: withdraw", "3: deposit", "4: exit", };
@@ -70,6 +104,16 @@ public class AtmMachine {
 		System.out.print("Enter a choice:");
 	}
 
+	/**
+	 * Check whether there is an account in the operational array.
+	 * 
+	 * @param accounts
+	 *            operational array
+	 * @param id
+	 *            account's id will be check
+	 * @return the account whether exist
+	 * 
+	 */
 	private boolean isExistAccount(Account[] accounts, int id) {
 		boolean ret;
 		if (0 <= id && id < accounts.length) {
@@ -80,6 +124,9 @@ public class AtmMachine {
 		return ret;
 	}
 
+	/**
+	 * Turn on this AtmMachine.
+	 */
 	public void run() {
 		for (;;) {
 			System.out.printf("Please input a account id(0-%d):",
